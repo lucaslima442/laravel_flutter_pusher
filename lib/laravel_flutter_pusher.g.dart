@@ -45,6 +45,7 @@ PusherOptions _$PusherOptionsFromJson(Map<String, dynamic> json) {
     host: json['host'] as String,
     port: json['port'] as int,
     encrypted: json['encrypted'] as bool,
+    useTLSOnPrivate: json['useTLSOnPrivate'] as bool,
     activityTimeout: json['activityTimeout'] as int,
   );
 }
@@ -63,6 +64,7 @@ Map<String, dynamic> _$PusherOptionsToJson(PusherOptions instance) {
   val['host'] = instance.host;
   val['port'] = instance.port;
   val['encrypted'] = instance.encrypted;
+  val['useTLSOnPrivate'] = instance.useTLSOnPrivate;
   val['activityTimeout'] = instance.activityTimeout;
   return val;
 }
