@@ -134,6 +134,7 @@ public class PusherInstance implements MethodChannel.MethodCallHandler {
                 pusherOptions.setWssPort(port);
             } else {
                 pusherOptions.setWsPort(port);
+                pusherOptions.setUseTLS(options.getBoolean("useTLSOnPrivate"));
             }
             pusherOptions.setEncrypted(encrypted);
 
