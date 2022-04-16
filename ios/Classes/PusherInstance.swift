@@ -83,6 +83,7 @@ public class PusherInstance: PusherDelegate{
                 host: initArgs.options.host != nil ? .host(initArgs.options.host!) : (initArgs.options.cluster != nil ? .cluster(initArgs.options.cluster!) : .host("ws.pusherapp.com")),
                 port: initArgs.options.port ?? (initArgs.options.encrypted ?? true ? 443 : 80),
                 encrypted: initArgs.options.encrypted ?? true,
+                useTLS: initArgs.options.useTLSOnPrivate ?? true,
                 activityTimeout: Double(initArgs.options.activityTimeout ?? 30000) / 1000
             )
             
@@ -363,6 +364,7 @@ struct Options: Codable {
     var host: String?
     var port: Int?
     var encrypted: Bool?
+    var useTLS: Bool?
     var auth: Auth?
     var activityTimeout: Int?
 }
