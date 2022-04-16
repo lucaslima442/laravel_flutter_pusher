@@ -45,6 +45,7 @@ void main() {
           port: 6001,
           encrypted: false,
           cluster: 'eu'
+          useTLSOnPrivate: false
       );
   
       LaravelFlutterPusher pusher = LaravelFlutterPusher('app_key', options, enableLogging: true);
