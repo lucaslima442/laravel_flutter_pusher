@@ -259,6 +259,7 @@ class PusherOptions {
   final String host;
   final int port;
   final bool encrypted;
+  final Uint8List caCertificate;
   final bool useTLSOnPrivate;
   final int activityTimeout;
 
@@ -268,6 +269,7 @@ class PusherOptions {
     required this.host,
     this.port = 443,
     this.encrypted = false,
+    Uint8List caCertificate = null,
     this.useTLSOnPrivate = true,
     this.activityTimeout = 30000,
   });
